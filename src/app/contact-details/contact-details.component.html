@@ -1,0 +1,23 @@
+<!-- <div *ngIf="contact">
+  <h2>{{ contact.nom }} {{ contact.prenom }}</h2>
+  <p>Email: {{ contact.email }}</p>
+  <p>Téléphone: {{ contact.telephone }}</p>
+  <p>État: {{ contact.etat }}</p>
+  <p>Description: {{ contact.description }}</p>
+  <p>Créé par: {{ contact.createdBy }}</p>
+  <p>Créé le: {{ contact.createdAt | date }}</p>
+  <button routerLink="/contacts">Retour à la liste des contacts</button>
+</div> -->
+
+<div *ngIf="contact">
+  <h2>{{ contact.nom }} {{ contact.prenom }}</h2>
+  <p>Email: {{ contact.email }}</p>
+  <p>Téléphone: {{ contact.telephone }}</p>
+  <p>État: {{ contact.etat }}</p>
+  <p>Description: {{ contact.description }}</p>
+  <p>Créé par: {{ contact.createdBy }}</p>
+  <p>Créé le: {{ contact.createdAt | date }}</p>
+  <button (click)="goBack()">Retour à la liste des contacts</button>
+</div>
+
+
