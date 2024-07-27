@@ -4,15 +4,32 @@
 <app-contact-details *ngIf="selectedContact" [contact]="selectedContact"></app-contact-details>
 <app-trash *ngIf="isViewingTrash"></app-trash> -->
 
-<header *ngIf="isLoggedIn">
-    <nav>
-      <a routerLink="/contacts" routerLinkActive="active">Mes Contacts</a>
-      <a routerLink="/trash" routerLinkActive="active">Corbeille</a>
-      <a href="#" (click)="logout()">Se déconnecter</a>
+<header *ngIf="isLoggedIn" class="bg-primary text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand" routerLink="/contacts" routerLinkActive="active">
+        <i class="fas fa-address-book"></i> Mes Contacts
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contacts" routerLinkActive="active">Mes Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/trash" routerLinkActive="active">Corbeille</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" (click)="logout()">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   
   <router-outlet></router-outlet>
+  
   
   
   

@@ -1,23 +1,29 @@
-<!-- <div *ngIf="contact">
-  <h2>{{ contact.nom }} {{ contact.prenom }}</h2>
-  <p>Email: {{ contact.email }}</p>
-  <p>Téléphone: {{ contact.telephone }}</p>
-  <p>État: {{ contact.etat }}</p>
-  <p>Description: {{ contact.description }}</p>
-  <p>Créé par: {{ contact.createdBy }}</p>
-  <p>Créé le: {{ contact.createdAt | date }}</p>
-  <button routerLink="/contacts">Retour à la liste des contacts</button>
-</div> -->
-
-<div *ngIf="contact">
-  <h2>{{ contact.nom }} {{ contact.prenom }}</h2>
-  <p>Email: {{ contact.email }}</p>
-  <p>Téléphone: {{ contact.telephone }}</p>
-  <p>État: {{ contact.etat }}</p>
-  <p>Description: {{ contact.description }}</p>
-  <p>Créé par: {{ contact.createdBy }}</p>
-  <p>Créé le: {{ contact.createdAt | date }}</p>
-  <button (click)="goBack()">Retour à la liste des contacts</button>
+<div class="container my-5">
+  <div class="card p-4 shadow-sm">
+    <div *ngIf="contact">
+      <h2 class="text-center mb-4">{{ contact.nom }} {{ contact.prenom }}</h2>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <p><strong>Email:</strong> {{ contact.email }}</p>
+          <p><strong>Téléphone:</strong> {{ contact.telephone }}</p>
+          <!-- <p><strong>État:</strong> {{ contact.etat }}</p> -->
+          <p><strong>Description:</strong> {{ contact.description }}</p>
+        </div>
+        <div class="col-md-6 mb-3 text-center">
+          <img [src]="contact.image" class="img-fluid rounded-circle border" alt="Photo de profil">
+        </div>
+        <!-- <div class="col-md-6 mb-3">
+          <p><strong>Créé par:</strong> {{ contact.createdBy }}</p>
+        </div> -->
+        <div class="col-md-6 mb-3">
+          <p><strong>Créé le:</strong> {{ contact.createdAt | date:'dd/MM/yyyy HH:mm' }}</p>
+          <p><strong>Mis à jour le:</strong> {{ contact.updatedAt | date:'dd/MM/yyyy HH:mm' }}</p>
+        </div>
+        
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn btn-primary" (click)="goBack()">Retour à la liste des contacts</button>
+      </div>
+    </div>
+  </div>
 </div>
-
-

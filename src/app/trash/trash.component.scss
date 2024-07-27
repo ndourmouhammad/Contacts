@@ -1,0 +1,33 @@
+/* Custom Styles */
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .trash-list {
+    border: none;
+  }
+  
+  .trash-list h2 {
+    color: #dc3545;
+  }
+  
+  .trash-list .card {
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  
+  .trash-list .card-title {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .trash-list .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .trash-list .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  

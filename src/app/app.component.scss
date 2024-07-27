@@ -1,20 +1,35 @@
+/* Custom Styles for Navbar */
 header {
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    background-color: #007bff; /* Blue background color */
   }
   
-  nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #007bff;
+  .navbar {
+    padding: 0.5rem 1rem;
   }
   
-  nav a.active {
+  .navbar-brand {
+    font-size: 1.25rem;
     font-weight: bold;
   }
   
-  nav a:hover {
-    text-decoration: underline;
+  .nav-link {
+    color: #ffffff; /* White text color for links */
+  }
+  
+  .nav-link.active {
+    color: #e9ecef; /* Light gray for active link */
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: #e9ecef; /* Light gray on hover */
+  }
+  
+  .navbar-toggler {
+    border-color: transparent; /* No border for toggler */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,.7)' stroke-width='2' d='M4 6h22M4 12h22M4 18h22'/%3E%3C/svg%3E");
   }
   

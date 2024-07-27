@@ -23,4 +23,5 @@ export interface Contact {
   updatedAt?: Date;
   updatedBy?: string;
   description: string;
+  image?: string;
 }
