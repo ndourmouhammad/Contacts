@@ -104,6 +104,9 @@ export class ContactListComponent implements OnInit {
     }
   }
 
+  editContact(id: string) {
+    this.router.navigate(['/edit-contact', id]);
+  }
   onSelect(contact: Contact): void {
     this.router.navigate(['/contact-details', contact.id]); // Navigue vers les détails du contact
   }
