@@ -147,14 +147,25 @@ export class ContactService {
     console.log('Contact ajouté à localStorage:', contacts); // Log pour vérifier
   }
 
+  // updateContact(updatedContact: Contact): void {
+  //   const contacts = JSON.parse(localStorage.getItem(this.contactsKey) || '[]');
+  //   const index = contacts.findIndex((contact: Contact) => contact.id === updatedContact.id);
+  //   if (index !== -1) {
+  //     contacts[index] = updatedContact;
+  //     localStorage.setItem(this.contactsKey, JSON.stringify(contacts));
+  //   }
+  // }
   updateContact(updatedContact: Contact): void {
     const contacts = JSON.parse(localStorage.getItem(this.contactsKey) || '[]');
     const index = contacts.findIndex((contact: Contact) => contact.id === updatedContact.id);
     if (index !== -1) {
+      // Mettre à jour la date de modification
+      updatedContact.updatedAt = new Date();
       contacts[index] = updatedContact;
       localStorage.setItem(this.contactsKey, JSON.stringify(contacts));
     }
   }
+  
 
   deleteContact(contactId: string): void {
     let contacts = JSON.parse(localStorage.getItem(this.contactsKey) || '[]');
@@ -187,8 +198,19 @@ export class ContactService {
   }
 
   // Nouvelle méthode pour obtenir un contact par ID
+  // getContactById(id: string): Contact | undefined {
+  //   const contacts = JSON.parse(localStorage.getItem(this.contactsKey) || '[]');
+  //   return contacts.find((contact: Contact) => contact.id === id);
+  // }
   getContactById(id: string): Contact | undefined {
     const contacts = JSON.parse(localStorage.getItem(this.contactsKey) || '[]');
-    return contacts.find((contact: Contact) => contact.id === id);
+    const contact = contacts.find((contact: Contact) => contact.id === id);
+    if (contact) {
+      // Convertir les chaînes de date en objets Date
+      if (contact.createdAt) contact.createdAt = new Date(contact.createdAt);
+      if (contact.updatedAt) contact.updatedAt = new Date(contact.updatedAt);
+    }
+    return contact;
   }
+  
 }

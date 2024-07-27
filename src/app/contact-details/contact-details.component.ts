@@ -38,13 +38,21 @@ export class ContactDetailsComponent implements OnInit {
     private router: Router
   ) {}
 
+  // ngOnInit(): void {
+  //   const contactId = this.route.snapshot.paramMap.get('id');
+  //   if (contactId) {
+  //     this.contact = this.contactService.getContactById(contactId) || null;
+  //     console.log('Détails du contact:', this.contact);
+  //   }
+  // }
   ngOnInit(): void {
     const contactId = this.route.snapshot.paramMap.get('id');
     if (contactId) {
       this.contact = this.contactService.getContactById(contactId) || null;
-      console.log('Détails du contact:', this.contact);
+      console.log('Détails du contact:', this.contact); // Vérifiez si updatedAt est bien présent
     }
   }
+  
 
   goBack(): void {
     this.router.navigate(['/contacts']);
