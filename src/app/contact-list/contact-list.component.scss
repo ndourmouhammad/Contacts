@@ -1,76 +1,21 @@
-.contact-list {
-    .card {
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.2s ease-in-out;
+/* Assurer que les cartes ont la même hauteur */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Assurer que les cartes occupent toute la hauteur disponible de leur conteneur */
+  }
   
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-      }
+  .card-img-top {
+    object-fit: cover; /* Maintenir le rapport d'aspect sans déformer l'image */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+  }
   
-      .card-img-top {
-        height: 100px;
-        object-fit: cover;
-        border-bottom: 1px solid #ddd;
-      }
+  /* Assurer que la barre de recherche et le bouton sont sur la même ligne */
+  .d-flex {
+    gap: 10px; /* Ajouter de l'espace entre le bouton et la barre de recherche */
+  }
   
-      .card-body {
-        display: flex;
-        flex-direction: column;
-        padding: 1.5rem;
-      }
-  
-      .card-title {
-        font-size: 1.25rem;
-        color: #333;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        transition: color 0.3s ease;
-  
-        &:hover {
-          color: #007bff;
-        }
-      }
-  
-      .btn-warning, .btn-danger {
-        border-radius: 20px;
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
-        transition: background-color 0.3s ease;
-      }
-  
-      .btn-warning {
-        background-color: #ffc107;
-        border: none;
-        &:hover {
-          background-color: #e0a800;
-        }
-      }
-  
-      .btn-danger {
-        background-color: #dc3545;
-        border: none;
-        &:hover {
-          background-color: #c82333;
-        }
-      }
-    }
-  
-    .text-center {
-      margin-top: 2rem;
-  
-      .btn-primary {
-        border-radius: 20px;
-        padding: 0.5rem 2rem;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
-      }
-    }
+  input.form-control {
+    flex: 1; /* Prendre tout l'espace disponible */
   }
   

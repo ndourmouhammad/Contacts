@@ -1,34 +1,3 @@
-// import { Injectable } from '@angular/core';
-// import { User } from './models/user';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AuthService {
-//   private users: User[] = [
-//     { id: '1', email: 'utilisateur1@example.com', password: 'motdepasse' },
-//     { id: '2', email: 'utilisateur2@example.com', password: 'motdepasse' }
-//   ];
-//   private currentUser: User | null = null;
-
-//   login(email: string, password: string): boolean {
-//     const user = this.users.find(u => u.email === email && u.password === password);
-//     if (user) {
-//       this.currentUser = user;
-//       return true;
-//     }
-//     return false;
-//   }
-
-//   logout(): void {
-//     this.currentUser = null;
-//   }
-
-//   getCurrentUser(): User | null {
-//     return this.currentUser;
-//   }
-// }
-
 import { Injectable } from '@angular/core';
 import { User } from './models/user';
 import { BehaviorSubject } from 'rxjs';

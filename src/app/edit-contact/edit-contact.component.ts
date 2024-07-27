@@ -33,6 +33,7 @@ export class EditContactComponent implements OnInit {
     if (this.contact) {
       this.contactService.updateContact(this.contact);
       this.router.navigate(['/contacts']);
+      this.contact.updatedAt = new Date();
     }
   }
 }
