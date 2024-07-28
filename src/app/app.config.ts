@@ -1,12 +1,3 @@
-// import { ApplicationConfig } from '@angular/core';
-// import { provideRouter } from '@angular/router';
-
-// import { routes } from './app.routes';
-
-// export const appConfig: ApplicationConfig = {
-//   providers: [provideRouter(routes)]
-// };
-
 import { Route, provideRouter } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
