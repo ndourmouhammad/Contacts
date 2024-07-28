@@ -67,8 +67,8 @@ export class ContactFormComponent {
     prenom: '',
     email: '',
     telephone: '',
-    etat: '',
     createdAt: new Date(),
+    updatedAt: new Date(),
     createdBy: '',
     description: ''
   };
